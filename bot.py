@@ -9,7 +9,7 @@ import threading
 TOKEN = 'vk1.a.goTp9VaoSbQd4h8S9r-y2oItpxs1xgekIJZgTI8ga3_tjcQ2oOImL0kZnV2pqrTuRLwPTlDOvPu3LOC8ne8AZIYu0WGGldgDotbwXvX_3rUiLTdW2UCoWNaSZ_h8NBojnlv6BycS5KbeTO8eQZsk5Xp0rDa5Hz79y4w6l7z_NE8e22t7caZToyRCB3xknZePpZk-CKRH09Do9MmZ5VCQIg'
 
 # Начальная дата и время, с которого начинается ускоренное время
-start_time = datetime(1922, 2, 1, 0, 0, 0)
+start_time = datetime(1922, 2, 10, 0, 0, 0)
 
 # Временной шаг для ускоренного времени (в виртуальных секундах за одну реальную секунду)
 time_step_seconds = 30  # 1 реальная секунда = 30 виртуальных секунд
