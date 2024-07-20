@@ -55,13 +55,12 @@ def keep_alive():
     while True:
         try:
             # Отправляем запрос к VK API, чтобы проверить соединение
-            vk.groups.getById(group_id=YOUR_GROUP_ID)
+            vk.groups.getById(group_id=201784905)
             time.sleep(25 * 60)  # Отправляем запрос каждые 25 минут
         except Exception as e:
             print(f"Ошибка keep-alive: {e}")
             print(traceback.format_exc())
             time.sleep(5)
-
 
 if __name__ == '__main__':
     keep_alive_thread = threading.Thread(target=keep_alive)
