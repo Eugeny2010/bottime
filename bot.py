@@ -3,6 +3,7 @@ import time
 from datetime import datetime, timedelta
 from vk_api.longpoll import VkLongPoll, VkEventType
 import traceback
+import threading
 
 # Ваш токен доступа
 TOKEN = 'vk1.a.goTp9VaoSbQd4h8S9r-y2oItpxs1xgekIJZgTI8ga3_tjcQ2oOImL0kZnV2pqrTuRLwPTlDOvPu3LOC8ne8AZIYu0WGGldgDotbwXvX_3rUiLTdW2UCoWNaSZ_h8NBojnlv6BycS5KbeTO8eQZsk5Xp0rDa5Hz79y4w6l7z_NE8e22t7caZToyRCB3xknZePpZk-CKRH09Do9MmZ5VCQIg'
@@ -52,6 +53,9 @@ def start_longpoll():
 
 
 if __name__ == '__main__':
+    keep_alive_thread = threading.Thread(target=keep_alive)
+    keep_alive_thread.daemon = True  # Делаем поток фоновым
+    keep_alive_thread.start()
     while True:
         try:
             start_longpoll()
